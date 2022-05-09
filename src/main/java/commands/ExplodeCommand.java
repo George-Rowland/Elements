@@ -38,6 +38,7 @@ public class ExplodeCommand implements CommandExecutor {
                 }
             } else {
                 p.sendMessage(Color("&cYou do not have the permission to use this command (elements.explode)"));
+                return true;
             }
 
 
