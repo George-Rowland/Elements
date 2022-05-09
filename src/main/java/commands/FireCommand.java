@@ -26,9 +26,9 @@ public class FireCommand implements CommandExecutor {
                 }
                 else {
                     p.sendMessage(Color("&7You have set &c" + args[0] + " &7on fire!"));
-                    return true;
                     Player target = Bukkit.getPlayer(args[0]);
                     target.setFireTicks(60);
+                    return true;
                 }
             } else {
                 p.sendMessage(Color("&cYou do not have the permission to use this command (elements.fire)"));
