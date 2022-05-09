@@ -29,12 +29,17 @@ public class ExplodeCommand implements CommandExecutor {
                     return true;
                 }
                 else {
+                    if (Bukkit.getPlayer(args[0]) != null) {
                     p.sendMessage(Color("&7You have exploded &c" + args[0] + "&7!"));
                     Player target = Bukkit.getPlayer(args[0]);
                     Location targetLoc = target.getLocation();
                     World world = target.getWorld();
                     world.createExplosion(targetLoc, 8, false, false);
                     return true;
+                    } else {
+                          p.sendMessage(Color("&cThat player is not online"));
+                          return true;
+                    }
                 }
             } else {
                 p.sendMessage(Color("&cYou do not have the permission to use this command (elements.explode)"));
