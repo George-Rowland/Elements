@@ -39,6 +39,7 @@ public class LightningCommand implements CommandExecutor {
                 }
             } else {
                 p.sendMessage(Color("&cYou do not have the permission to use this command (elements.lightning)"));
+                return true;
             }
 
 
@@ -48,8 +49,5 @@ public class LightningCommand implements CommandExecutor {
             sender.sendMessage("This command may only be used InGame");
             return true;
     }
-
-
-        return false;
     }
 }
