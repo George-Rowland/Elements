@@ -25,10 +25,10 @@ public class FireCommand implements CommandExecutor {
                     return true;
                 }
                 else {
-                    Player target = Bukkit.getPlayer(args[0]);
-                    target.setFireTicks(60);
                     p.sendMessage(Color("&7You have set &c" + args[0] + " &7on fire!"));
                     return true;
+                    Player target = Bukkit.getPlayer(args[0]);
+                    target.setFireTicks(60);
                 }
             } else {
                 p.sendMessage(Color("&cYou do not have the permission to use this command (elements.fire)"));
@@ -41,8 +41,6 @@ public class FireCommand implements CommandExecutor {
         } else {
             sender.sendMessage("This command may only be used InGame");
         }
-
-
         return false;
     }
 }
