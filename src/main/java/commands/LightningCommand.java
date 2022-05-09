@@ -26,10 +26,15 @@ public class LightningCommand implements CommandExecutor {
                     return true;
                 }
                 else {
+                    if (Bukkit.getPlayer(args[0]) != null) {
                     p.sendMessage(Color("&7You have smited &c" + args[0] + "&7!"));
                     Player target = Bukkit.getPlayer(args[0]);
                     target.getPlayer().getWorld().strikeLightning(target.getLocation());
                     return true;
+                  } else {
+                    p.sendMessage(Color("&cThat player is not online"));
+                    return true;
+                }
 
                 }
             } else {
