@@ -41,7 +41,8 @@ public class LightningCommand implements CommandExecutor {
 
         } else {
             sender.sendMessage("This command may only be used InGame");
-        }
+            return true;
+    }
 
 
         return false;
