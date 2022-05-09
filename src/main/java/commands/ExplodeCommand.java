@@ -29,11 +29,11 @@ public class ExplodeCommand implements CommandExecutor {
                     return true;
                 }
                 else {
+                    p.sendMessage(Color("&7You have exploded &c" + args[0] + "&7!"));
                     Player target = Bukkit.getPlayer(args[0]);
                     Location targetLoc = target.getLocation();
                     World world = target.getWorld();
                     world.createExplosion(targetLoc, 8, false, false);
-                    p.sendMessage(Color("&7You have exploded &c" + args[0] + "&7!"));
                     return true;
                 }
             } else {
