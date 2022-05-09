@@ -1,0 +1,12 @@
+name: Elements
+version: '${project.version}'
+main: com.georgerowland.elements.Elements
+api-version: 1.18
+
+commands:
+  lightning:
+    usage: /<command>
+  explode:
+    usage: /<command>
+  fire:
+    usage: /<command>
